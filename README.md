@@ -1,6 +1,6 @@
 # Image-Morphing
 
-Image Morphing - Implemented using warp morphing technique, cross-dissolving and Bilinear \ Gaussian interpolations for color estimation.
+Image Morphing - Implemented using warp morphing technique, cross-dissolving and nearest-neighbor \ bilinear \ Gaussian interpolations for color estimation.
 
 The program should be run from command line in the following manner: <exe_file> <config_file>
 Where <exe_file> is the name of the program's executable and <config file> is the name of a text
@@ -25,5 +25,5 @@ The program outputs are 3 sequences of images, each sequence containing
   corresponding images of the warped sequences, weighed according to the value of t
   and <sequence length>.
 
-
-Color estimation is calculated by Bilinear interpolation by default, and can be triggered to give better and smoother color estimation with '-g' flag added as a Bonus for Gaussian estimation using Gaussian values matrix. 
+Color estimation is calculated by nearest-neighbor interpolation by default (taking the color of the nearest pixel).
+To change the color estimation for the better, use '-b' flag for bilinear interpolation and use '-g' for Gaussian estimation to get even better and smoother color estimation using  the Gaussian values matrix. 
